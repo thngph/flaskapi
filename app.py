@@ -14,6 +14,7 @@ def hello():
 @app.route('/api/', methods=['POST'])
 def makecalc():
     data = request.get_json(force=True)
+    return data
     data.update((x, [y]) for x, y in data.items())
     data = pd.DataFrame.from_dict(data)
     prediction = model.predict(data)
