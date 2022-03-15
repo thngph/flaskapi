@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect, url_for, flash, jsonify
 import numpy as np
+import pandas as pd
 import pickle as p
 import json
 
@@ -12,8 +13,10 @@ def hello():
 
 @app.route('/api/', methods=['POST'])
 def makecalc():
-    data = request.get_json()
-    prediction = np.array2string(model.predict(data))
+    data = request.get_json(force=True)
+    data.update((x, [y]) for x, y in data.items())
+    data = pd.DataFrame.from_dict(data)
+    prediction = model.predict(data)
 
     return jsonify(prediction)
 
