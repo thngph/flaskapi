@@ -6,6 +6,6 @@ Input is a 1D array of 11 features, the output is 1 if the wine quality is predi
 
 Data set: [https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009)
 
-Notebook: [https://colab.research.google.com/drive/1ajPS6w2Q3ZSWrodfsm1Smt8CG3hcCE5L?usp=sharing](https://colab.research.google.com/drive/1ajPS6w2Q3ZSWrodfsm1Smt8CG3hcCE5L?usp=sharing)
+Model training: [https://colab.research.google.com/drive/1ajPS6w2Q3ZSWrodfsm1Smt8CG3hcCE5L?usp=sharing](https://colab.research.google.com/drive/1ajPS6w2Q3ZSWrodfsm1Smt8CG3hcCE5L?usp=sharing)
 # Heroku deployment
 Available at [https://x28-flaskapi.herokuapp.com/](https://x28-flaskapi.herokuapp.com/)
