@@ -6,6 +6,8 @@ import json
 
 
 app = Flask(__name__)
+modelfile = 'models/final_prediction.sav'
+model = p.load(open(modelfile, 'rb'))
 
 @app.route("/", methods=["GET"])
 def hello():
@@ -14,13 +16,9 @@ def hello():
 @app.route('/api/', methods=['POST'])
 def makecalc():
     data = request.get_json(force=True)
-    data.update((x, [y]) for x, y in data.items())
-    data = pd.DataFrame.from_dict(data)
-    prediction = model.predict(data)
-
+    data = np.array(data)
+    prediction = np.array2string(model.predict(data))
     return jsonify(prediction)
 
 if __name__ == '__main__':
-    modelfile = 'models/final_prediction.sav'
-    model = p.load(open(modelfile, 'rb'))
     app.run(debug=True, host='0.0.0.0')

@@ -7,3 +7,4 @@ peewee
 Werkzeug
 numpy
 pandas
+sklearn
