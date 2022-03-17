@@ -33,5 +33,12 @@ def makecalc():
     output = {"Quality":np.uint0(prediction[1])}
     return render_template('output.html', output=output)
 
+@app.route('/api/raw', methods=['POST'])
+def makeprediction():
+    data = request.get_json(force=True)
+    data = np.array(data)
+    prediction = np.array2string(model.predict(data))
+    return prediction
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
