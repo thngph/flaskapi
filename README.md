@@ -1,25 +1,11 @@
-# What is Heroku Flask Template ?
-`version 1.1`
+# Red Wine ML Flask API introduction
 
-Heroku Flask Template is a simple web app programmed in Python-3 using flask micro-framework. It is created for begginers to understand the basics of creating a flask web app and deploying it on the Heroku. It can also be used as a template to create your new flask web apps which can then easily be deployable on Heroku.
+This project deploys a Random Forest Classifier to classify Red Wine Quality.
 
-##### Please note that this web-app is designed to be deployed on the HEROKU Platform. You can visit it by clicking [here](https://flasktemplate.herokuapp.com).
+Input is a 1D array of 11 features, the output is 1 if the wine quality is predicted to be good (score from 6.5 to 8), zero is bad (score below 6.5).
 
-## Language, Framework and Plugins used :
-- ### Python 3.6.2
-- ### Flask micro-framework
-- ### Heroku
+Data set: [https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009)
 
-## How to use the Heroku Flask Template ?
-- ### Download or clone this template.
-- ### Add your web-pages in the `templates` folder.
-- ### Edit `main.py` to add new routes and render the web-pages.
-- ### Add all the extra plugins that you used in the `requirements.txt`.
-- ### Push it to the Heroku server and deploy.
-
-## Why I created this template ?
-I tried to deploy several of my python applications to Heroku. But it was a disaster to find out so many flaws. There were so many tutorials yet it takes so much time to figure things out, thus once I sucessfully deployed my first flask app on Heroku I decided to upload it on GitHub so that everyone can use it ! 
-
-## License and Usage :
-
-This project is completely open-source and free-to-use. But you will need to mention about its great, super awesome author XD (JK, use it anywhere you want, I really don't care.) PS, Happy Coding! 
+Model training: [https://colab.research.google.com/drive/1ajPS6w2Q3ZSWrodfsm1Smt8CG3hcCE5L?usp=sharing](https://colab.research.google.com/drive/1ajPS6w2Q3ZSWrodfsm1Smt8CG3hcCE5L?usp=sharing)
+# Heroku deployment
+Available at [https://x28-flaskapi.herokuapp.com/](https://x28-flaskapi.herokuapp.com/)
