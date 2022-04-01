@@ -1,6 +1,6 @@
 # Red Wine ML Flask API introduction
 
-This project deploys a Random Forest Classifier to classify Red Wine Quality.
+This project is a web application that can predict Wine quality based on its physicochemical properties using machine learning (Random Forest Classifier).
 
 Input is a 1D array of 11 features, the output is 1 if the wine quality is predicted to be good (score from 6.5 to 8), zero is bad (score below 6.5).
 
